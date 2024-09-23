@@ -61,24 +61,24 @@ def set_date_widgets(
     :type layout: QLayout
     """
 
-    date_one = QPushButton('2024-04-21 12:00:00')
-    date_two = QPushButton('2024-04-21 15:00:00')
-    date_three = QPushButton('2024-04-21 18:00:00')
-    date_four = QPushButton('2024-04-21 21:00:00')
-    date_five = QPushButton('2024-04-22 00:00:00')
-    date_six = QPushButton('2024-04-22 03:00:00')
+    date_one = QPushButton('2024-09-23 00:00:00')
+    date_two = QPushButton('2024-09-23 03:00:00')
+    date_three = QPushButton('2024-09-23 06:00:00')
+    date_four = QPushButton('2024-09-23 09:00:00')
+    date_five = QPushButton('2024-09-23 12:00:00')
+    date_six = QPushButton('2024-09-23 15:00:00')
 
     # Setting the datetimes based on the available temporal data from
     # the used layer, at the time of writing this the layer had the below temporal
     # date time values available. These might need to be changed by looking
     # at the temporal layer capabilities.
 
-    date_time_one = QDateTime(QDate(2024, 4, 21), QTime(12, 00, 00))
-    date_time_two = QDateTime(QDate(2024, 4, 21), QTime(15, 00, 00))
-    date_time_three = QDateTime(QDate(2024, 4, 21), QTime(18, 00, 00))
-    date_time_four = QDateTime(QDate(2024, 4, 21), QTime(21, 00, 00))
-    date_time_five = QDateTime(QDate(2024, 4, 22), QTime(00, 00, 00))
-    date_time_six = QDateTime(QDate(2024, 4, 22), QTime(3, 00, 00))
+    date_time_one = QDateTime(QDate(2024, 9, 23), QTime(0, 00, 00))
+    date_time_two = QDateTime(QDate(2024, 9, 23), QTime(3, 00, 00))
+    date_time_three = QDateTime(QDate(2024, 9, 23), QTime(6, 00, 00))
+    date_time_four = QDateTime(QDate(2024, 9, 23), QTime(9, 00, 00))
+    date_time_five = QDateTime(QDate(2024, 9, 23), QTime(12, 00, 00))
+    date_time_six = QDateTime(QDate(2024, 9, 23), QTime(15, 00, 00))
 
 
     animate_date_one = partial(get_date, map_canvas, date_time_one)
@@ -98,6 +98,7 @@ def set_date_widgets(
 
     animate_date_six = partial(get_date, map_canvas, date_time_six)
     date_six.clicked.connect(animate_date_six)
+
 
     dates = [
         date_time_one,
@@ -161,9 +162,9 @@ def run():
     #
     raster_layer = QgsRasterLayer(
         'crs=EPSG:4326&dpiMode=7&format=image/png&layers=GDPS.ETA_TT&'
-        'referenceTimeDimensionExtent=2024-04-20T00:00:00Z/2024-04-21T12:00:00Z/PT12H&'
+        'referenceTimeDimensionExtent=2024-09-22T00:00:00Z/2024-09-23T00:00:00Z/PT12H&'
         'styles&temporalSource=provider&'
-        'timeDimensionExtent=2024-04-21T12:00:00Z/2024-05-01T12:00:00Z/PT3H&'
+        'timeDimensionExtent=2024-09-23T00:00:00Z/2024-10-03T00:00:00Z/PT3H&'
         'type=wmst&url=https://geo.weather.gc.ca/geomet?layers%3DGDPS.ETA_TT',
         'air',
         'wms'

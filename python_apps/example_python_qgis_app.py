@@ -11,7 +11,7 @@ QgsApplication.initQgis()
 main_window = QMainWindow()
 main_window.setWindowTitle(
     "Python with QGIS example | "
-    "DjangoCon Africa 2024"
+    "DjangoCon US 2024"
 )
 frame = QFrame()
 main_window.setCentralWidget(frame)
