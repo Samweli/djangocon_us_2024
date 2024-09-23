@@ -1,4 +1,9 @@
-FROM python:3.9-slim
+FROM qgis/qgis
+
+# Set environment variables for QGIS
+ENV QGIS_PREFIX_PATH=/usr
+ENV QT_QPA_PLATFORM=offscreen
+ENV XDG_RUNTIME_DIR=/tmp/runtime-root
 
 WORKDIR /app
 
