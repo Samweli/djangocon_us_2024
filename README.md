@@ -47,3 +47,10 @@ To run the project, ensure you have the following installed:
 
 ### Contributing
 Feel free to contribute to the project by submitting pull requests or issues on GitHub.
+
+
+### License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+### Contact
+If you have any questions or issues, please reach out smwltwesa6@gmail.com
